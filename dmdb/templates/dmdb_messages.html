@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+{% for msg in messages %}
+    <message>
+        <id>{{ msg.id_obj }}</id>
+        <tx>{{ msg.tx_obj }}</tx>
+        <timestamp>{{ msg.timestamp_obj }}</timestamp>
+        <json>{{ msg.json_obj }}</json>
+    </message>
+{% endfor %}
+</messages>
