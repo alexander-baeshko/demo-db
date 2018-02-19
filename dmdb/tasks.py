@@ -36,7 +36,7 @@ def load_data_to_mysql():
 
     print("[load_data_to_mysql] Start messages processing")
     for iter in range(consume_msg_count):
-        msg = channel.basic_get(queue='dmrmq',
+        msg = channel.basic_get(queue=RMQ_QUEUE,
                                 no_ack=False)
         msg_delivery_tag = msg[0].delivery_tag
         msg_payload = pickle.loads(msg[2])
